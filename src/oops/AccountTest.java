@@ -4,17 +4,16 @@ import java.util.Scanner;
 
 class Customer{
     private int custId;
-    private String custName,custaddress;
+    private String custName;
 
-    public Customer(int id, String name, String address) {
+    public Customer(int id, String name) {
         this.custId = id;
         this.custName = name;
-        this.custaddress = address;
     }
 
     public String display(){
 
-    return "\n\nCustomerId :"+custId+"\n"+"CustomerName :"+custName+"\n"+"CustomerAddress :"+custaddress;
+    return "\n\nCustomerId :"+custId+"\n"+"CustomerName :"+custName+"\n"+"CustomerAddress :";
     }
 }
 class AccountInfo{
@@ -48,10 +47,7 @@ public class AccountTest {
         System.out.println("Enter Name: ");
         String custName = sc.next();
 
-        System.out.println("Enter Address: ");
-        String custAddress = sc.next();
-
-        Customer c = new Customer(custId,custName,custAddress);
+        Customer c = new Customer(custId,custName);
 
         System.out.println("Enter Account number:");
         int accountNo = sc.nextInt();
